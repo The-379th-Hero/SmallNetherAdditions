@@ -1,6 +1,11 @@
 package annabeth.annabethsnethermod.blocks;
 
+import annabeth.annabethsnethermod.SNAMain;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
@@ -59,7 +64,10 @@ public class SNABlocks {
 	public static Block WARPED_WART;
 	
 	public static void createBlocks() {
+		SOUL_SANDSTONE = new Block(AbstractBlock.Properties.of(Material.STONE, MaterialColor.COLOR_BROWN).requiresCorrectToolForDrops().strength(0.8f).speedFactor(0.4f).sound(SoundType.BASALT)).setRegistryName(SNAMain.MODID, "soul_sandstone");
 		
+		
+		BLUE_NETHER_BRICKS = new Block(AbstractBlock.Properties.of(Material.STONE, MaterialColor.WARPED_WART_BLOCK).requiresCorrectToolForDrops().strength(2.0f, 6.0f).sound(SoundType.NETHER_BRICKS)).setRegistryName(SNAMain.MODID, "blue_nether_bricks");
 	}
 	
 	public static void registerBlocks(IForgeRegistry<Block> ifr) {
